@@ -1,0 +1,121 @@
+<html >
+<head>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    .close {
+      float: right;
+      padding: 3px;
+      color: #DE365F;
+    }
+    .button {
+      text-align: center;
+      padding: 5px 10px;
+      background-color: #56B954;
+      border: 1px solid #56B954;
+    }
+    body {
+      font-family: sans-serif;
+      font-size: 130%;
+    }
+    body > div {
+      border: 3px solid #333;
+      background-color: #DDD;
+    }
+  </style>
+  <script type="text/javascript">
+    var datenschutz = []
+    datenschutz.push("Sind Sie damit einverstanden, dass Ihre Anfrage an einen Server im Internet geschickt wird?")
+    datenschutz.push("Bitte bestägtigen Sie, dass Cookies auf Ihrem Computer gespeichert werden!")
+    datenschutz.push("Beachten Sie bitte die Hinweise, dass Sie Ihre Daten im Internet eingeben!")
+    datenschutz.push("Achtung: Sie befinden sich im Internet!")
+    datenschutz.push("Sie können Ihre Daten nur selbst schützen!")
+    datenschutz.push("Möchten Sie wirklich Daten ins Internet senden?")
+    datenschutz.push("Achtung: Ihre Daten werden an das Internet gesendet.")
+    datenschutz.push("Hinweis: Sie befinden sich im Internet!")
+    datenschutz.push("Ihr Browser wird mit einem Server kommunizieren.")
+    datenschutz.push("Sie werden Daten an einen Rechner im Internet senden.")
+    datenschutz.push("Ist Ihnen bewusst, dass Sie diese Daten von einem Server, möglicherweise aus dem Ausland erhalten haben?")
+    datenschutz.push("Möchten Sie diese Internetseite wirklich aufrufen?")
+    datenschutz.push("Diese Seite wird womöglich nicht in Deutschland gespeichert.")
+    datenschutz.push("Achtung: Möchten Sie diese Seite wirklich in ihrem Browsercache speichern?")
+    datenschutz.push("Achtung: Sie kommunizieren mit einem ausländischen Server.")
+    datenschutz.push("Achtung: Sie kommunizieren mit einem ausländischen Rechner.")
+    datenschutz.push("Diese Seite wurde von einem Server heruntergeladen!")
+    datenschutz.push("Sie haben das WWW geöffnet.")
+    datenschutz.push("VORSICHT: Sie haben das WWW geöffnet!!!")
+    datenschutz.push("Möchten Sie das WWW benutzen?")
+    datenschutz.push("Möchten Sie das WWW wirklich benutzen???")
+    datenschutz.push("Daten werden über ihre Internetleitung versendet!")
+    datenschutz.push("ACHTUNG: DATEN WURDEN EMPFANGEN!")
+    datenschutz.push("ACHTUNG: DATEN WURDEN WIRKLICH EMPFANGEN!")
+    datenschutz.push("Ihre Daten werden dorthin geschickt, wo Sie sie eingeben!")
+    datenschutz.push("Sie befinden sich auf einer Internetseite im Internet.")
+    datenschutz.push("Womöglich wird diese Webseite in Ihrem Gehirn zwischengespeichert.")
+    datenschutz.push("Möchten Sie das Internet wirklich benutzen?")
+    datenschutz.push("Haben Sie die 3.500 seitige Datenschutzerklärung gelesen?")
+    datenschutz.push("Haben Sie die Datenschutzerklärung verstanden?")
+    datenschutz.push("Ihre Daten sind geschützt. Unsere Server nur nicht. Höhöhöhö!")
+    datenschutz.push("Ihre Daten sind geschützt.")
+    datenschutz.push("Bitte laden Sie keine Fotos von Ihrem Geschlechtsteil hoch.")
+    datenschutz.push("Es könnten Cookies gespeichert werden.")
+    datenschutz.push("Wir könnten Ihren Daten speichern.")
+    datenschutz.push("Sie können diese Webseite nicht benutzen, wenn wir nicht Ihre Daten speichern dürfen.")
+    datenschutz.push("Danke für Ihr Verständnis!")
+    datenschutz.push("JOKER!")
+
+
+    var OK = []
+    OK.push("JA")
+    OK.push("OKAY")
+    OK.push("OK")
+    OK.push("BESTÄTIGE")
+    OK.push("VERSTANDEN")
+
+    function startLayer() {
+      random = Math.floor(Math.random() * (30000 - 1000))  + 1000
+      var showtext = "<span class='close' onclick='this.parentElement.style.display=\"none\"'>X</span>";
+      var randomText = Math.floor(Math.random() * (datenschutz.length - 0))  + 0
+      var randomOK = Math.floor(Math.random() * (OK.length - 0))  + 0
+
+      showtext += datenschutz[randomText]
+
+      showtext += "<br/><div class='button' onclick='this.parentElement.style.display=\"none\"'>"+ OK[randomOK] + "</div>";
+
+      setTimeout(function(){ openLayer(showtext) }, Number(random));
+
+    }
+
+    function openLayer(text) {
+      var maxW = Number(window.innerWidth) - 400;
+      var maxH = Number(window.innerHeight) - 200;
+
+      var width = Math.floor(Math.random() * (400 - 200))  + 200
+      var height = Math.floor(Math.random() * (200 - 100)) + 100
+
+      var topx = Math.floor(Math.random() * (Number(maxW) - 20)) + 20
+      var topy = Math.floor(Math.random() * (Number(maxH) - 20)) + 20
+
+      var div = document.createElement("div");
+      div.style.width =  width + "px";
+      div.style.position = "absolute";
+      div.style.minheight = height + "px";
+      div.style.top = topy + "px";
+      div.style.left = topx + "px";
+      div.innerHTML = text;
+
+      document.body.appendChild(div);
+    }
+
+    i = 0
+    while (i < 200) {
+      startLayer()
+      i++
+    }
+  </script>
+</head>
+<body>
+  <!-- BAD THINGS HAPPENZ HERE! -->
+  <h1>Datenschutz im Internet. Made In Germany!</h1>
+  Bitte bestätigen Sie die Meldungen, damit alles Datenschutzkonform ablaufen kann und wird. Höhöhöhöhöhöhö!
+</body>
+</html>
